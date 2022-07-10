@@ -66,12 +66,12 @@ export default class Inscription extends Component {
       userRole: this.state.userRole
     };
     console.log(user);
-    
+
 
     UserService.createUser(user)
       .then(response => {
-        
-        window.location.href="/Authentification";
+
+        window.location.href = "/Authentification";
 
 
       })
@@ -79,7 +79,7 @@ export default class Inscription extends Component {
         console.log(e);
         alert("probleme d'inscription")
       });
-      
+
   }
   newUser() {
     this.setState({
@@ -146,11 +146,27 @@ export default class Inscription extends Component {
                         onChange={this.onChangePassword} />
                       <label htmlFor="cage">Mot de passe</label>
                     </div>
+                    <label style={{ color: "white", fontSize: '11px' }}>
+                      Pour des raisons de sécurité, le mot de passe doit être composé au moins de 8 caractères,
+                      comprenant au moins une lettre(majuscule et miniscule),
+                      un chiffre et un caractère spécial parmi les suivants:(! # $ %  * + - / = ? )
+                    </label>
+                  </div>
+
+                  <div className="col-sm-12">
+                    <div className="form-floating">
+                      <input className="form-control border-0" required type="confirmpassword" id="confirm" name="confirm" placeholder="confirm"
+                      />
+                      <label htmlFor="cage">confirmation Mot de passe</label>
+                    </div>
                   </div>
 
 
+
+
+
                   <table>
-                    <tr><td><b style={{ color:'#ff7a59' }}>Select Role:</b></td><td><div className="radio">
+                    <tr><td><b style={{ color: '#ff7a59' }}>Select Role:</b></td><td><div className="radio">
 
                       <input
                         type="radio"
@@ -158,7 +174,7 @@ export default class Inscription extends Component {
                         value="1"
                         onChange={this.onChangeUserRole}
                       />
-                      <label style={{ color:'white' }} for="dewey"> Groupe Corilus </label>
+                      <label style={{ color: 'white' }} for="dewey"> Groupe Corilus </label>
 
                     </div></td>
                       <td></td>
@@ -171,7 +187,7 @@ export default class Inscription extends Component {
                           onChange={this.onChangeUserRole}
                         />
 
-                        <label style={{ color:'white' }} for="dewey">Particulier</label>
+                        <label style={{ color: 'white' }} for="dewey">Particulier</label>
                       </div> </tr>
 
                   </table>
