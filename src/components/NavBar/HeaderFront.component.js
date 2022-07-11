@@ -21,6 +21,7 @@ import ArchiveStep2ByUser from '../Front/ArchiveStep2ByUser.component';
 import ArchiveStep1ByUser from '../Front/ArchiveStep1ByUser.component';
 
 import ArchiveStep3ByUser from '../Front/ArchiveStep3ByUser.component';
+import ModifierProfil from '../Front/Modifierprofil.component';
 
 export default class HeaderFront extends React.Component {
 
@@ -65,6 +66,8 @@ export default class HeaderFront extends React.Component {
                                                     
                                                     <Route exact path='/Reimportfile' element={< Reimportfile />}></Route>
                                                     <Route exact path='/archivestep1user' element={< ArchiveStep1ByUser />}></Route>
+
+                                                    <Route exact path='/ModifierProfil' element={< ModifierProfil />}></Route>
 
 
                     <Route exact path='/' element={< Accueil />}></Route>

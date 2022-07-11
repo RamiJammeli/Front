@@ -64,9 +64,9 @@ export default class NavBarComponent extends React.Component {
                         </div>
 
                         {sessionStorage.getItem("Token") != null ?
-                            <NavLink to={'/profil'} className="nav-item nav-link"> Profil </NavLink>
+                            <NavLink to={'/ModifierProfil'} className="nav-item nav-link"> Profil </NavLink>
                             :
-                            <NavLink to={'/profil'} style={{ display:'none' }} className="nav-item nav-link"> Profil </NavLink>
+                            <NavLink to={'/ModifierProfil'} style={{ display:'none' }} className="nav-item nav-link"> Profil </NavLink>
                         }
 
 
