@@ -32,8 +32,7 @@ export default class Bestcategorie extends React.Component {
                     categories.push(res.data[i].libelle)
                     nombres.push(res.data[i].nombre)
                 }
-                console.log(categories);
-                console.log(nombres);
+              
 
 
                 this.setState({
@@ -91,7 +90,7 @@ export default class Bestcategorie extends React.Component {
                         plugins: {
                             title: {
                                 display: true,
-                                text: 'Custom Chart Title'
+                                text: 'Catégories les plus utilisées'
                             }
                         }
                       }}

@@ -27,7 +27,7 @@ export default class Inscription extends Component {
   }
   onChangeUserName(e) {
     this.setState({
-      userName: e.target.value
+      username: e.target.value
     });
   }
   onChangeFirstName(e) {
@@ -58,7 +58,7 @@ export default class Inscription extends Component {
   }
   saveUser() {
     var user = {
-      userName: this.state.userName,
+      username: this.state.username,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
@@ -107,7 +107,7 @@ export default class Inscription extends Component {
 
                   <div className="col-sm-12">
                     <div className="form-floating">
-                      <input className="form-control border-0" required type="text" id="login" name="login" placeholder="login" value={this.state.userName}
+                      <input className="form-control border-0" required type="text" id="login" name="login" placeholder="login" value={this.state.username}
                         onChange={this.onChangeUserName} />
                       <label htmlFor="cage">Nom d'Utilisateur</label>
                     </div>
