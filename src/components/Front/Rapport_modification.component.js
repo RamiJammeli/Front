@@ -284,7 +284,7 @@ export default class Rapport_modification extends React.Component {
               {
                 this.state.integration.titres != null ?
                   this.state.integration.titres.map((p) => <li >{p.libelle} <ul>
-                    {p.sous_titres.map((soustitre) => <li id="soustitre" onDragStart={this.handleDragStart} onDragEnd={this.handleDragEnd} onDragOver={this.handleDragOver} onDragEnter={this.handleDragEnter} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop} className='donnes' draggable="true" style={{ cursor: 'move' }}>{soustitre.titres}</li>)}
+                    {p.sous_titres.map((soustitre) => <li onDragStart={this.handleDragStart} onDragEnd={this.handleDragEnd} onDragOver={this.handleDragOver} onDragEnter={this.handleDragEnter} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop} className='donnes' draggable="true" style={{ cursor: 'move' }}>{soustitre.libelle}</li>)}
                   </ul>
                   </li>
                   )
@@ -296,7 +296,7 @@ export default class Rapport_modification extends React.Component {
               {
                 this.state.integration.paragraphes != null ?
                   this.state.integration.paragraphes.map((p) => <li >{p.libelle} <ul>
-                    {p.sous_paragraphe.map((sousparagraphe) => <li id="sousparagraphe" onDragStart={this.handleDragStart} onDragEnd={this.handleDragEnd} onDragOver={this.handleDragOver} onDragEnter={this.handleDragEnter} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop} className='donnes' draggable="true" style={{ cursor: 'move' }}>{sousparagraphe.libelle}</li>)}
+                    {p.sous_paragraphe.map((sousparagraphe) => <li  onDragStart={this.handleDragStart} onDragEnd={this.handleDragEnd} onDragOver={this.handleDragOver} onDragEnter={this.handleDragEnter} onDragLeave={this.handleDragLeave} onDrop={this.handleDrop} className='donnes' draggable="true" style={{ cursor: 'move' }}>{sousparagraphe.libelle}</li>)}
                   </ul>
                   </li>
                   )

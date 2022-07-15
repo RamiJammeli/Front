@@ -159,9 +159,9 @@ export default class ArchiveStep3ByUser extends React.Component {
 
                 <h4 className='titre '>Mes Archives Step 3</h4>
                 <div className='row' style={{ display: 'inline-block', marginBottom: '20px', marginLeft: '1%' }}>
-                    <span> <Link to={"/archivestep2user"} style={{ display: 'inline-block', color: 'rgba(0,136,164,1)' }} title="Vue table" ><i className="fas fa-table"></i></Link> </span>
+                    <span> <Link to={"/ArchiveStep3ByUser"} style={{ display: 'inline-block', color: 'rgba(0,136,164,1)' }} title="Vue table" ><i className="fas fa-table"></i></Link> </span>
                     <span> | </span>
-                    <span> <Link to={"/archivestep2pdfuser"} style={{ display: 'inline-block' }} title="Consulter Vos archives. Vous pouvez faire une recherche de contenu" ><i className="fas fa-eye"></i></Link> </span>
+                    <span> <Link to={"/archivestep3pdfuser"} style={{ display: 'inline-block' }} title="Consulter Vos archives. Vous pouvez faire une recherche de contenu" ><i className="fas fa-eye"></i></Link> </span>
 
 
                 </div>
