@@ -19,6 +19,7 @@ import Reimportfile from '../Front/Reimportfile.component';
 import ArchiveStep2ByUserPdf from '../Front/ArchiveStep2ByUserPdf.component';
 import ArchiveStep2ByUser from '../Front/ArchiveStep2ByUser.component';
 import ArchiveStep1ByUser from '../Front/ArchiveStep1ByUser.component';
+import ArchiveStep3ByUserPdf from '../Front/archivestep3pdfuser.component';
 
 import ArchiveStep3ByUser from '../Front/ArchiveStep3ByUser.component';
 import ModifierProfil from '../Front/Modifierprofil.component';
