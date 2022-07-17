@@ -165,7 +165,7 @@ export default class ArchiveStep2Admin extends React.Component {
                                             <button title="Download Pdf version" className="btn btn-link" onClick={() => this.download(item.id)}><i class="fas fa-file-pdf" style={{ color: "orangered" }}></i></button>
                                             <button title="Extraire data" className="btn btn-link" onClick={() => this.downloadinput(item.id)}><i className="fas fa-file-import" style={{ color: "purple" }}></i></button>
                                             <button title="Supprimer archive" className="btn btn-link" onClick={() => this.delete(item.id)}><i className="fas fa-trash-alt" style={{ color: "red" }}></i></button>
-                                            <button title="Confirmer l'archive" className="btn btn-link" onClick={() => this.delete(item.id)}><i className="fas fa-check-square" style={{ color: "green" }}></i></button>
+                                            <button title="Confirmer l'archive" className="btn btn-link" onClick={() => this.confirmer(item.id)}><i className="fas fa-check-square" style={{ color: "green" }}></i></button>
                                         </div>
                                     </th>
                                 </tr>
