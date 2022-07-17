@@ -9,6 +9,7 @@ export default class Inscription extends Component {
     this.onChangeLastName = this.onChangeLastName.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
+    this.onChangeconfirmPassword= this.onChangeconfirmPassword.bind(this);
     this.onChangeUserRole = this.onChangeUserRole.bind(this);
 
     this.saveUser = this.saveUser.bind(this);
@@ -20,6 +21,7 @@ export default class Inscription extends Component {
       firstName: "",
       lastName: "",
       email: "",
+      confirmpassword: "",
       password: "",
       userRole: ""
 
@@ -50,6 +52,11 @@ export default class Inscription extends Component {
       password: e.target.value
     });
   }
+  onChangeconfirmPassword(e) {
+    this.setState({
+      confirmpassword: e.target.value
+    });
+  }
 
   onChangeUserRole(e) {
     this.setState({
@@ -57,6 +64,7 @@ export default class Inscription extends Component {
     });
   }
   saveUser() {
+    if(this.state.username!=""&&this.state.firstName!=""&&this.state.lastName!=""&&this.state.confirmpassword!=""&&this.state.password!=""&&this.state.email!="" &&this.state.userRole!=""){
     var user = {
       username: this.state.username,
       firstName: this.state.firstName,
@@ -79,6 +87,9 @@ export default class Inscription extends Component {
         console.log(e);
         alert("probleme d'inscription")
       });
+    } else {
+      document.getElementById('error').style.display = "block";
+    }
 
   }
   newUser() {
@@ -89,6 +100,7 @@ export default class Inscription extends Component {
       lastName: "",
       email: "",
       password: "",
+      confirmpassword: "",
       UserRole: ""
     });
   }
@@ -155,8 +167,10 @@ export default class Inscription extends Component {
 
                   <div className="col-sm-12">
                     <div className="form-floating">
-                      <input className="form-control border-0" required type="confirmpassword" id="confirm" name="confirm" placeholder="confirm"
+                      <input className="form-control border-0" required type="password" id="confirm" name="confirm" placeholder="confirm" value={this.state.confirmpassword}
+                        onChange={this.onChangeconfirmPassword}
                       />
+                      <p id='error' style={{ display: 'none', color: 'red' }}> Vérifier vos coordonnées</p>
                       <label htmlFor="cage">confirmation Mot de passe</label>
                     </div>
                   </div>
@@ -196,7 +210,7 @@ export default class Inscription extends Component {
                     <input type="button" onClick={this.saveUser} className="btn btn-primary3 w-100 py-3" value="S'inscrire" />
                     <div><br></br></div>
 
-                    <p id='error' style={{ display: 'none', color: 'red' }}> Vérifier vos coordonnées</p>
+                    <p id='error' style={{ display: 'none', color: 'red' }}> Veuillez remplir les champs</p>
 
                   </div>
                 </div>

@@ -56,6 +56,8 @@ export default class HeaderFront extends React.Component {
                                             
                                                     <Route exact path='/Templates/:id' element={< Rapport_template />}></Route>
                                                     <Route exact path='/ArchiveStep3ByUser' element={< ArchiveStep3ByUser />}></Route>
+                                                    <Route exact path='/archivestep3pdfuser' element={< ArchiveStep3ByUserPdf />}></Route>
+
                                                     <Route exact path='/inscription' element={< Inscription />}></Route>
                                                     <Route exact path='/Authentification' element={< Authentification />}></Route>
                                                     <Route exact path='/Templates' element={< Rapport_template />}></Route>
