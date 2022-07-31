@@ -1,3 +1,4 @@
+import { contains } from "jquery";
 import React, { Component } from "react";
 import UserService from '../../services/UserService'
 export default class Inscription extends Component {
@@ -45,9 +46,18 @@ export default class Inscription extends Component {
   onChangeEmail(e) {
     this.setState({
       email: e.target.value
+      
     });
+
+
+    if(e.target.value.includes('@') && e.target.value.includes('.')){
+      document.getElementById('errormail').style.display = "none";
+    }
+    else
+    document.getElementById('errormail').style.display = "block";
   }
   onChangePassword(e) {
+    document.getElementById('note').style.display = "block";
     this.setState({
       password: e.target.value
     });
@@ -56,6 +66,12 @@ export default class Inscription extends Component {
     this.setState({
       confirmpassword: e.target.value
     });
+    if(e.target.value!=this.state.password) {
+      document.getElementById('errorconfirmpassword').style.display = "block";
+    }else
+    document.getElementById('errorconfirmpassword').style.display = "none";
+
+
   }
 
   onChangeUserRole(e) {
@@ -148,6 +164,7 @@ export default class Inscription extends Component {
                       <input className="form-control border-0" required type="text" id="login" name="login" placeholder="login" value={this.state.email}
                         onChange={this.onChangeEmail} />
                       <label htmlFor="cage">Adresse Email</label>
+                      <p id='errormail' style={{ display: 'none', color: 'red' }}> Email invalide</p>
                     </div>
                   </div>
 
@@ -158,7 +175,7 @@ export default class Inscription extends Component {
                         onChange={this.onChangePassword} />
                       <label htmlFor="cage">Mot de passe</label>
                     </div>
-                    <label style={{ color: "white", fontSize: '11px' }}>
+                    <label id ="note" style={{ color: "white", fontSize: '11px' , display:'none'}}>
                       Pour des raisons de sécurité, le mot de passe doit être composé au moins de 8 caractères,
                       comprenant au moins une lettre(majuscule et minuscule),
                       un chiffre et un caractère spécial parmi les suivants:(! # $ %  * + - / = ? )
@@ -169,9 +186,11 @@ export default class Inscription extends Component {
                     <div className="form-floating">
                       <input className="form-control border-0" required type="password" id="confirm" name="confirm" placeholder="confirm" value={this.state.confirmpassword}
                         onChange={this.onChangeconfirmPassword}
+
                       />
-                      <p id='error' style={{ display: 'none', color: 'red' }}> Vérifier vos coordonnées</p>
+                      <p id='error1' style={{ display: 'none', color: 'red' }}> Vérifier vos coordonnées</p>
                       <label htmlFor="cage">confirmation Mot de passe</label>
+                      <p id='errorconfirmpassword' style={{ display: 'none', color: 'red' }}> Les deux mots de passe ne sont pas identiques</p>
                     </div>
                   </div>
 
@@ -183,7 +202,7 @@ export default class Inscription extends Component {
                     <tr><td><b style={{ color: '#ff7a59' }}>Select Role:</b></td><td><div className="radio">
 
                       <input
-                        type="radio"
+                        type="radio" name="rad"
 
                         value="1"
                         onChange={this.onChangeUserRole}
@@ -194,7 +213,7 @@ export default class Inscription extends Component {
                       <td></td>
                       <div className="radio">
 
-                        <input
+                        <input name="rad"
                           type="radio"
                           value="2"
 
