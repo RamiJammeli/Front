@@ -84,29 +84,22 @@ export default class HeaderFront extends React.Component {
                 <div className="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
                     <div className="container">
                         <div className="row g-5">
-                            <div className="col-lg-3 col-md-6">
-                                <h4 className="text-white mb-4">Get In Touch</h4>
-                                <h2 className="text-primary2 mb-4"><i className="fa fa-car text-white me-2"></i>Drivin</h2>
-                                <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                                <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                                <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
+                            <div className="col-lg-4 col-md-6">
+                                <h4 className="text-white mb-4">Informations</h4>
+                                <h2 className="text-primary2 mb-4"><img width="50" height="50" src={process.env.PUBLIC_URL + '/logofooter.png'} />Corilus</h2>
+                                <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>Rue Camille Hubert 23 5032 Les Isnes </p>
+                                <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+32 (0)81 77 99 30</p>
+                                <p className="mb-2"><i className="fa fa-envelope me-3"></i>information@corilus.be</p>
                             </div>
-                            <div className="col-lg-3 col-md-6">
+                            <div className="col-lg-5 col-md-6">
                                 <h4 className="text-light mb-4">Quick Links</h4>
-                                <a className="btn btn-link" href="">About Us</a>
-                                <a className="btn btn-link" href="">Contact Us</a>
-                                <a className="btn btn-link" href="">Our Services</a>
+                                <a className="btn btn-link" href="">A propos</a>
+                                <a className="btn btn-link" href="">Contacts</a>
+                                <a className="btn btn-link" href="">Nos Services</a>
                                 <a className="btn btn-link" href="">Terms  Condition</a>
                                 <a className="btn btn-link" href="">Support</a>
                             </div>
-                            <div className="col-lg-3 col-md-6">
-                                <h4 className="text-light mb-4">Popular Links</h4>
-                                <a className="btn btn-link" href="">About Us</a>
-                                <a className="btn btn-link" href="">Contact Us</a>
-                                <a className="btn btn-link" href="">Our Services</a>
-                                <a className="btn btn-link" href="">Terms  Condition</a>
-                                <a className="btn btn-link" href="">Support</a>
-                            </div>
+                            
                             <div className="col-lg-3 col-md-6">
                                 <h4 className="text-light mb-4">Newsletter</h4>
                                 <form action="">

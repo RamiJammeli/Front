@@ -160,7 +160,7 @@ export default class Inscription extends Component {
                     </div>
                     <label style={{ color: "white", fontSize: '11px' }}>
                       Pour des raisons de sécurité, le mot de passe doit être composé au moins de 8 caractères,
-                      comprenant au moins une lettre(majuscule et miniscule),
+                      comprenant au moins une lettre(majuscule et minuscule),
                       un chiffre et un caractère spécial parmi les suivants:(! # $ %  * + - / = ? )
                     </label>
                   </div>
